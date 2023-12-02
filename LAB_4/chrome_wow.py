@@ -75,58 +75,6 @@ class ChromeWow:
 
         self.logger.info("Continue to payment")
         self.driver.find_element(By.CSS_SELECTOR, "#continue_button").submit()
-
-        self.logger.info("Add credit card details")
-        self.driver.find_element(By.CSS_SELECTOR, "#number").send_keys("1111 2222 3333 4444")
-        self.driver.find_element(By.CSS_SELECTOR, "#name").send_keys("John Doe")
-        self.driver.find_element(By.CSS_SELECTOR, "#expiry").send_keys("01/26")
-        self.driver.find_element(By.CSS_SELECTOR, "#verification_value").send_keys("111")
+        sleep(2)
 
         self.driver.quit()
-
-        
-
-# driver.get("https://eu.gear.blizzard.com/")
-# driver.implicitly_wait(4)
-
-# # promo_popup = driver.find_element(By.CSS_SELECTOR, '.klaviyo-close-form')
-# # promo_popup.click()
-
-# search = driver.find_element(By.NAME, 'q')
-# search.send_keys('horde beanie')
-# button_submit = driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
-# button_submit.submit()
-
-# search_successfull = driver.find_element(By.CSS_SELECTOR, ".search-page>.container>.page-header>h1>span:nth-child(3)").text
-# print(search_successfull)
-# tc = unittest.TestCase()
-# tc.assertEqual("REVEALED THE FOLLOWING:", search_successfull)
-# # assert search_successfull == "REVEALED THE FOLLOWING:"
-
-# driver.find_element(By.CSS_SELECTOR, ".product-collection>div>div:nth-child(1)").click()
-# # sleep(2)
-
-# popup_close = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".klaviyo-close-form")))
-# popup_close.click()
-# sleep(2)
-# driver.find_element(By.CSS_SELECTOR, "#product-add-to-cart").click()
-# sleep(2)
-# driver.find_element(By.CSS_SELECTOR, ".btn-checkout").click()
-# sleep(4)
-# driver.find_element(By.CSS_SELECTOR, "#checkout_email").send_keys("john.doe@example.com")
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_first_name").value="John"
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_last_name").value="Doe"
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_address1").value="Imaginary Rd"
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_address1").value="1/2"
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_city").value="Gdańsk"
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_zip").value="80-001"
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_address1").value="1/2"
-# driver.find_element(By.CSS_SELECTOR, "#checkout_shipping_address_phone").value="+48606606606"
-# driver.find_element(By.CSS_SELECTOR, "#continue_button").submit()
-
-
-
-
-
-# sleep(2)
-# driver.quit()

@@ -8,4 +8,3 @@
 6. Przejdź do kasy
 7. Podaj dane: e-mail, imię, nazwisko, dane adresowe, nr telefonu
 8. Wybierz metodę dostawy
-9. Wprowadź dane karty kredytowej: nr karty, imię i nazwisko na karcie, datę ważności, kod bezpieczeństwa
