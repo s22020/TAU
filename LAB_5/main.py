@@ -86,3 +86,5 @@ while board_game.player_position != board_game.finish:
     print("Possible moves: up, down, left, right")
     chose_move = input("Enter your move: ")
     board_game.move(chose_move)
+
+print("The winner is you! \o/")
