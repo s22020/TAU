@@ -41,7 +41,6 @@ class BoardGame:
             self.finish = self._generate_edge_coords()
 
         for i in range(min(self.rows * self.cols // 5, 10)):
-            print(self.rows * self.cols // 5)
             obstacle = self._generate_obstacle_coords()
 
             while obstacle == self.finish or obstacle == self.player_position or obstacle in self.obstacles:
@@ -79,10 +78,6 @@ class BoardGame:
 
 board_game = BoardGame(5, 5)
 while board_game.player_position != board_game.finish:
-    print("Player pos")
-    print(board_game.player_position)
-    print("Finish pos")
-    print(board_game.finish)
     board_game.update_board_state()
     board_game.print_board()
     print("Possible moves: up, down, left, right")
