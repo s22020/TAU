@@ -61,18 +61,20 @@ class BoardGame:
             print('|'.join(row))
         print()
 
+    def _is_valid_move(self, move):
+        return 0 <= move[0] < self.rows and 0 <= move[1] < self.cols and (move[0], move[1]) not in self.obstacles
+
     def move(self, direction):
-        match direction:
-            case 'up':
-                self.player_position = (self.player_position[0] - 1, self.player_position[1])
-            case 'down':
-                self.player_position = (self.player_position[0] + 1, self.player_position[1])
-            case 'left':
-                self.player_position = (self.player_position[0], self.player_position[1] - 1)
-            case 'right':
-                self.player_position = (self.player_position[0], self.player_position[1] + 1)
-            case _:
-                print("Invalid move")
+        if direction == 'up' and self._is_valid_move((self.player_position[0] - 1, self.player_position[1])):
+            self.player_position = (self.player_position[0] - 1, self.player_position[1])
+        elif direction == 'down' and self._is_valid_move((self.player_position[0] + 1, self.player_position[1])):
+            self.player_position = (self.player_position[0] + 1, self.player_position[1])
+        elif direction == 'left' and self._is_valid_move((self.player_position[0], self.player_position[1] - 1)):
+            self.player_position = (self.player_position[0], self.player_position[1] - 1)
+        elif direction == 'right' and self._is_valid_move((self.player_position[0], self.player_position[1] + 1)):
+            self.player_position = (self.player_position[0], self.player_position[1] + 1)
+        else:
+            print("Invalid move")
 
 
 board_game = BoardGame(5, 5)
