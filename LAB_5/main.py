@@ -40,7 +40,7 @@ class BoardGame:
         while self.finish == self.player_position:
             self.finish = self._generate_edge_coords()
 
-        for i in range(min(self.rows * self.cols // 5, 10)):
+        for i in range(min((self.rows * self.cols) // 5, 10)):
             obstacle = self._generate_obstacle_coords()
 
             while obstacle == self.finish or obstacle == self.player_position or obstacle in self.obstacles:
