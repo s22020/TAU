@@ -75,13 +75,13 @@ class BoardGame:
         else:
             print("Invalid move")
 
+if __name__ == '__main__':
+    board_game = BoardGame(5, 5)
+    while board_game.player_position != board_game.finish:
+        board_game.update_board_state()
+        board_game.print_board()
+        print("Possible moves: up, down, left, right")
+        chose_move = input("Enter your move: ")
+        board_game.move(chose_move)
 
-board_game = BoardGame(5, 5)
-while board_game.player_position != board_game.finish:
-    board_game.update_board_state()
-    board_game.print_board()
-    print("Possible moves: up, down, left, right")
-    chose_move = input("Enter your move: ")
-    board_game.move(chose_move)
-
-print("The winner is you! \o/")
+    print("The winner is you! \o/")
